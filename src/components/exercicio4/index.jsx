@@ -6,6 +6,8 @@ function Exercicio4() {
 
 	return (
 		<>
+      <h1 className="title">Exercicio4</h1>
+
 		 <div
         style={{
           display: "flex",
