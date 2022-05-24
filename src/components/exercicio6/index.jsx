@@ -2,11 +2,42 @@ import { useState } from "react";
 import AnimalList from './AnimalList'
 
 function Exercicio6() {
-  const animals = ["dog", "cat", "chicken", "cow", "sheep", "horse"];
 
+  function arrayConstructor(item,index){
+    this.name = item
+    this.key = index
+  }
+
+  const animals = ["dog", "cat", "chicken", "cow", "sheep", "horse"];
+  const newAnimals = animals.map((elem,)=>{
+    switch (elem) {
+      case 'dog':
+        return `🐶 ${elem} `
+        break;
+      case 'cat':
+        return `🐱 ${elem} `
+        break;
+      case 'chicken':
+        return `🐔 ${elem} `
+        break;
+      case 'horse':
+        return `🐴 ${elem} `
+        break;
+      case 'cow':
+        return `🐮 ${elem} `
+        break;
+      case 'sheep':
+        return `🐑 ${elem} `
+        break;
+    
+      default:
+        return elem
+        break;
+    }
+  })
   return (
     <>
-	<h1>Exercicio 6</h1>
+	<h1 className="title">Exercicio 6</h1>
       <div
         style={{
           display: "flex",
@@ -17,7 +48,7 @@ function Exercicio6() {
           height: "100%",
         }}
       >
-		  <AnimalList list={animals}></AnimalList>
+		  <AnimalList list={newAnimals}></AnimalList>
 
 	  </div>
     </>
