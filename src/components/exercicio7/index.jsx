@@ -1,9 +1,10 @@
 import { useState } from "react";
+import HelloForm from "./HelloForm";
 
 function Exercicio7() {
   return (
     <>
-      <h1 className="title">Exercicio5</h1>
+      <h1 className="title">Exercicio7</h1>
       <div
         style={{
           display: "flex",
@@ -14,8 +15,7 @@ function Exercicio7() {
           height: "100%",
         }}
       >
-        {/* Content */}
-        {/* Content */}
+        <HelloForm></HelloForm>
       </div>
     </>
   );
