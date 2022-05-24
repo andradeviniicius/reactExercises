@@ -10,30 +10,7 @@ function Exercicio6() {
 
   const animals = ["dog", "cat", "chicken", "cow", "sheep", "horse"];
   const newAnimals = animals.map((elem,)=>{
-    switch (elem) {
-      case 'dog':
-        return `🐶 ${elem} `
-        break;
-      case 'cat':
-        return `🐱 ${elem} `
-        break;
-      case 'chicken':
-        return `🐔 ${elem} `
-        break;
-      case 'horse':
-        return `🐴 ${elem} `
-        break;
-      case 'cow':
-        return `🐮 ${elem} `
-        break;
-      case 'sheep':
-        return `🐑 ${elem} `
-        break;
     
-      default:
-        return elem
-        break;
-    }
   })
   return (
     <>
@@ -48,7 +25,7 @@ function Exercicio6() {
           height: "100%",
         }}
       >
-		  <AnimalList list={newAnimals}></AnimalList>
+		  <AnimalList list={animals}></AnimalList>
 
 	  </div>
     </>
