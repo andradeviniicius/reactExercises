@@ -1,13 +1,17 @@
+import { useRef } from "react"
+
 export default function MainButton(props){
-    function clickHandler(e){
-        alert(e.target.innerText)
+    const child = useRef()
+
+    function clickHandler(){
+        alert(child.current.innerText)
     }
     
     return (
-        <button onClick={clickHandler}>
+        <button ref={child} onClick={clickHandler}>
             {props.children}
         </button>
     )
 }
 
- 
+// useRef
