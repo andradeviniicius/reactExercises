@@ -1,6 +1,6 @@
 export default function AnimalList(props) {
   const arr = props.list;
-  const animalList = arr.map((a, index) => {
+  const animalList = arr.map((a) => {
 
     switch (a) {
       case 'dog':
@@ -26,9 +26,6 @@ export default function AnimalList(props) {
         return a
         break;
     }
-
-
-    <li key={index}>{a}</li>;
   });
   console.log(animalList);
   return (
